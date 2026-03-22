@@ -13,7 +13,7 @@ spec:
         app: insta
     spec:
       containers:
-      - name: instagram_cont
+      - name: instagram-cont
         image: rajeshtutta123/instagram:latest
         ports:
         - containerPort: 5000
