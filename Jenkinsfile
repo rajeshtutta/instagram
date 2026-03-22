@@ -53,5 +53,15 @@ pipeline {
                 sh 'docker run -d -p 5000:5000 --name $CONTAINER_NAME $IMAGE_NAME'
             }
         }
+
+        stage('Deploy to Kubernetes') {
+            steps {
+                sh '''
+                kubectl apply -f k8s-deployment.yml
+                kubectl apply -f k8s-service.yml
+                '''
+            }
+        }
+
     }
 }
