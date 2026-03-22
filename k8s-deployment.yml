@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: instagram-deployment
+  name: instadeploy
 spec:
   replicas: 2
   selector:
@@ -13,7 +13,7 @@ spec:
         app: insta
     spec:
       containers:
-      - name: instagram-cont
+      - name: insta-cont
         image: rajeshtutta123/instagram:latest
         ports:
         - containerPort: 5000
