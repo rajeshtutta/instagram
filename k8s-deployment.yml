@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: instagram_cont
-        image: rajestutta123/instagram:latest
+        image: rajeshtutta123/instagram:latest
         ports:
         - containerPort: 5000
