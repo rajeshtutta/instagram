@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: instagram-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: insta
+  template:
+    metadata:
+      labels:
+        app: insta
+    spec:
+      containers:
+      - name: instagram_cont
+        image: rajestutta123/instagram:latest
+        ports:
+        - containerPort: 5000
