@@ -2,16 +2,16 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "shivadocker2997/instagram"
+        IMAGE_NAME = "rajeshtutta123/instagram"
         CONTAINER_NAME = "insta-cont"
-        DOCKER_CREDENTIALS_ID = "Docker_CRED"
+        DOCKER_CREDENTIALS_ID = "dockerhub-cred"
     }
 
     stages {
 
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/shivaprabha2997/instagram.git'
+                git branch: 'main', url: 'https://github.com/rajeshtutta/instagram.git'
             }
         }
 
