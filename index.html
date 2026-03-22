@@ -1,13 +1,148 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Instagram Clone</title>
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Clone</title>
 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #fafafa;
+        }
+
+        .navbar-brand img {
+            height: 35px;
+        }
+
+        /* Stories */
+        .story img {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            border: 3px solid #ff004f;
+            padding: 2px;
+        }
+        .story p {
+            font-size: 12px;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        /* Post */
+        .post-img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .post-user {
+            font-weight: bold;
+        }
+
+        .icons i {
+            font-size: 25px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .liked {
+            color: red !important;
+        }
+    </style>
+</head>
 <body>
 
-<h1>Instagram Clone</h1>
-<p>Welcome to my DevOps project</p>
+<!-- NAVBAR -->
+<nav class="navbar navbar-light bg-white shadow-sm px-3">
+    <a class="navbar-brand" href="#">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Logo">
+    </a>
+</nav>
+
+
+<!-- STORIES -->
+<div class="container mt-3">
+    <div class="d-flex overflow-auto">
+        <div class="story text-center me-3">
+            <img src="https://i.pravatar.cc/100?img=1">
+            <p>Surya</p>
+        </div>
+
+        <div class="story text-center me-3">
+            <img src="https://i.pravatar.cc/100?img=2">
+            <p>Teja</p>
+        </div>
+
+        <div class="story text-center me-3">
+            <img src="https://i.pravatar.cc/100?img=3">
+            <p>Kiran</p>
+        </div>
+
+        <div class="story text-center me-3">
+            <img src="https://i.pravatar.cc/100?img=4">
+            <p>Priya</p>
+        </div>
+    </div>
+</div>
+
+
+<!-- FEED POST -->
+<div class="container mt-4">
+
+    <!-- Post 1 -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <span class="post-user">surya_8442</span>
+        </div>
+
+        <img class="post-img" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800" >
+
+        <div class="card-body">
+            <div class="icons">
+                <i class="bi bi-heart" onclick="likePost(this)"></i>
+                <i class="bi bi-chat"></i>
+                <i class="bi bi-send"></i>
+            </div>
+
+            <p class="mt-2"><strong>120 likes</strong></p>
+            <p>Beautiful view ❤️</p>
+        </div>
+    </div>
+
+    <!-- Post 2 -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <span class="post-user">travel_world</span>
+        </div>
+
+        <img class="post-img" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800">
+
+        <div class="card-body">
+            <div class="icons">
+                <i class="bi bi-heart" onclick="likePost(this)"></i>
+                <i class="bi bi-chat"></i>
+                <i class="bi bi-send"></i>
+            </div>
+
+            <p class="mt-2"><strong>620 likes</strong></p>
+            <p>Adventure time 🌍</p>
+        </div>
+    </div>
+
+</div>
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+<!-- JS -->
+<script>
+    function likePost(el) {
+        el.classList.toggle("bi-heart");
+        el.classList.toggle("bi-heart-fill");
+        el.classList.toggle("liked");
+    }
+</script>
 
 </body>
 </html>
